@@ -1,0 +1,140 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; 
+  text-transform: capitalize; 
+  transition: all 0.3 linear;
+}
+
+.container{
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   background-image: linear-gradient (90deg, _#e6f374  0%, O#7a8650 100%);
+}
+
+.box{
+    width: 250px;
+    height: 455px;
+    background-color: #f2f2f2;
+    border-radius: 5px; 
+    padding: 20px;
+    padding-top: 80px;
+    margin: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 3px 5px rgba(0,0,0,.3); 
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.box h3{
+    font-size: 25px;
+    padding: 20px 0;
+    color: #444;
+}
+
+.box p{
+    font-size: 15px;
+    color: #777;
+}
+
+.box button{
+    width: 140px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-top: 40px;
+}
+
+.box button:hover{
+    letter-spacing: 2px;
+    opacity: .8;
+
+}
+ .box::before{
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+ }
+
+ .box::after{
+    width:100%;
+    height: 100%;
+    background-color: #7ae459;
+    background-image: linear-gradient(160deg, #6bcb3b 0%, #b1ed62 100% );
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    clip-path: circle(20% at 90% 10%);
+    transition: .2s;
+ }
+
+ .box .count{
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    font-size: 50px;
+    font-weight: bolder;
+    color:#fff;
+ }
+
+ .box:nth-child(2)::after{
+    background-color: #84b824;
+    background-image: linear-gradient(160deg,  #6bcb3b 0%, #b1ed62 100%);
+ }
+
+ .box:nth-child(3)::after{
+    background-color: #b0d95e;
+    background-image: linear-gradient(160deg,  #6bcb3b 0%, #b1ed62 100%);
+ }
+ 
+ .box:nth-child(4)::after{
+    background-color: #8f9a17;
+    background-image: linear-gradient(160deg,  #6bcb3b 0%, #b1ed62 100%);
+ }
+ 
+ .box:nth-child(5)::after{
+    background-color: #cff449;
+    background-image: linear-gradient(160deg,  #6bcb3b 0%, #b1ed62 100%);
+ }
+
+ .box:hover::after{
+    clip-path: circle(100%);
+ }
+
+ .box:hover h3{
+    color: #fff
+ }
+
+ .box:hover p{
+    color: #fff
+ }
+
+ .box:hover button{
+    color: #333;
+    background-color: #fff;
+ }
+
+ .box:hover ::before{
+    background-color: rgba(0,0,0,.1);
+
+ }
+ 
+ 
